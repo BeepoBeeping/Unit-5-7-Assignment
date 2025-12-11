@@ -1,5 +1,6 @@
 using System.Threading;
 using TMPro;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -12,11 +13,12 @@ public class ButtonScript : MonoBehaviour
 
     public GameObject player;
 
-    public void L1Button()
+    public void LoadButton()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("DummyScene");
         FindFirstObjectByType<AudioManager>().PlayClip("ButtonClick");
     }
+
     public void ButtonClick()
     {
         FindFirstObjectByType<AudioManager>().PlayClip("ButtonClick");
