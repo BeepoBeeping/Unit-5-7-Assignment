@@ -32,6 +32,16 @@ public class ButtonScript : MonoBehaviour
         FindFirstObjectByType<AudioManager>().PlayClip("ButtonHover");
     }
 
+    public void ButtonInactive()
+    {
+        FindFirstObjectByType<AudioManager>().PlayClip("ButtonInactive");
+    }
+
+    public void ButtonQuit()
+    {
+        Application.Quit();
+    }
+
     public void OnMouseEnter()
     {
         ButtonHover();
