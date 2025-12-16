@@ -19,6 +19,12 @@ public class ButtonScript : MonoBehaviour
         FindFirstObjectByType<AudioManager>().PlayClip("ButtonClick");
     }
 
+    public void LoadMenuButton()
+    {
+        SceneManager.LoadScene("Menu");
+        FindFirstObjectByType<AudioManager>().PlayClip("ButtonClick");
+    }
+
     public void ButtonClick()
     {
         FindFirstObjectByType<AudioManager>().PlayClip("ButtonClick");
