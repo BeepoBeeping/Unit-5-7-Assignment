@@ -406,8 +406,8 @@ GameObject:
   m_Component:
   - component: {fileID: 351676109}
   - component: {fileID: 351676108}
-  - component: {fileID: 351676107}
   - component: {fileID: 351676110}
+  - component: {fileID: 351676111}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -415,14 +415,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &351676107
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 351676106}
-  m_Enabled: 1
 --- !u!20 &351676108
 Camera:
   m_ObjectHideFlags: 0
@@ -533,6 +525,14 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
+--- !u!81 &351676111
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 351676106}
+  m_Enabled: 1
 --- !u!1 &400513530
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,7 +815,6 @@ GameObject:
   m_Component:
   - component: {fileID: 534298286}
   - component: {fileID: 534298285}
-  - component: {fileID: 534298284}
   - component: {fileID: 534298283}
   m_Layer: 0
   m_Name: CanvasCamera
@@ -868,14 +867,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!81 &534298284
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 534298282}
-  m_Enabled: 1
 --- !u!20 &534298285
 Camera:
   m_ObjectHideFlags: 0
@@ -955,6 +946,7 @@ GameObject:
   - component: {fileID: 593487614}
   - component: {fileID: 593487613}
   - component: {fileID: 593487617}
+  - component: {fileID: 593487618}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1062,6 +1054,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ButtonScript
   buttonText: {fileID: 0}
   player: {fileID: 0}
+--- !u!114 &593487618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 593487612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a124508d3e5fe9a44986e1308d926dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VolumeSettings
+  mixer: {fileID: 24100000, guid: 8750aba54974ba24aab1560f07882bc4, type: 2}
+  musicSlider: {fileID: 0}
+  sfxSlider: {fileID: 0}
 --- !u!1 &617818898
 GameObject:
   m_ObjectHideFlags: 0
@@ -1187,6 +1194,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 993719555}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &617818902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1195,6 +1214,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617818898}
   m_CullTransparentMesh: 1
+--- !u!1001 &993719554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7242210979650151500, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 974.2262
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242210979650151500, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 489.81296
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242210979650151500, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 42.09998
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242210979650151500, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242210979650151500, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242210979650151500, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242210979650151500, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242210979650151500, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242210979650151500, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7242210979650151500, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8753623487095489966, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+--- !u!82 &993719555 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 2212475742369104089, guid: 1b14577c30bb4b74fae4bdf3e7103c24, type: 3}
+  m_PrefabInstance: {fileID: 993719554}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1862898367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,3 +1412,4 @@ SceneRoots:
   - {fileID: 593487616}
   - {fileID: 15792235}
   - {fileID: 534298286}
+  - {fileID: 993719554}

@@ -12,6 +12,11 @@ public class ButtonScript : MonoBehaviour
     public TMP_Text buttonText;
 
     public GameObject player;
+    
+    public void Yadadadada()
+    {
+        print("Press");
+    }
 
     public void LoadButton()
     {
@@ -21,6 +26,7 @@ public class ButtonScript : MonoBehaviour
     public void LoadMenuButton()
     {
         SceneManager.LoadScene("Menu");
+        AudioManager.instance.LoadVolume();
     }
  
     public void ButtonQuit()
