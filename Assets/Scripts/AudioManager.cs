@@ -1,13 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
 {
-    public float musicVolume, sfxVolume;
+    
     public static AudioManager instance;
+    [SerializeField] AudioMixer mixer;
 
-    public Sound[] sounds;
-    AudioSource audioSource; //reference to the audio source component on the game object
+    public AudioSource audioSource; //reference to the audio source component on the game object
+
+    public const string MUSIC_KEY = "musicVolume";
+    public const string SFX_KEY = "sfxVolume";
 
     void Awake()
     {
@@ -26,54 +30,19 @@ public class AudioManager : MonoBehaviour
             return;
         }
 
-        foreach( Sound s in sounds)
-        {
-            s.source = gameObject.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
+        LoadVolume();
 
-            s.source.volume = s.volume;
-            s.source.pitch = s.pitch;
-            s.source.loop = s.loop;
 
-        }
     }
+    
 
-    private void Start()
+    public void LoadVolume() // volume saved in volumesettings
     {
-        ChangeMusicVolume(PlayerPrefs.GetFloat("musicVolume"));
-        PlayClip("MenuBG");
+        float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
+        float sfxVolume = PlayerPrefs.GetFloat(SFX_KEY, 1f);
+
+        mixer.SetFloat(VolumeSettings.MIXER_MUSIC, Mathf.Log10(musicVolume) * 20);
+        mixer.SetFloat(VolumeSettings.MIXER_SFX, Mathf.Log10(sfxVolume) * 20);
     }
-
-    public void PlayClip(string name)
-    {
-        Sound s = Array.Find(sounds, sound => sound.name == name);
-        s.source.Play();
-    }
-
-    public void StopClip()
-    {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.Stop(); //stop currently playing clip
-    }
-
-    public void ChangeAudioSourceVolume(string name, float vol)
-    {
-        Sound s = Array.Find(sounds, AudioSystem => AudioSystem.name == name);
-        if (s == null)
-        {
-            Debug.LogWarning("Sound: " + name + "Not found!");
-            return;
-        }
-        s.source.volume = vol;
-
-
-    }
-
-
-    public void ChangeMusicVolume(float volume)
-    {
-        musicVolume = volume;
-    }
-
 
 }
