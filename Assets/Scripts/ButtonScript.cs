@@ -1,6 +1,6 @@
-using System;
 using System.Threading;
 using TMPro;
+using UnityEditor.Timeline.Actions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -28,15 +28,10 @@ public class ButtonScript : MonoBehaviour
         SceneManager.LoadScene("Menu");
         AudioManager.instance.LoadVolume();
     }
-
+ 
     public void ButtonQuit()
     {
         Application.Quit();
     }
 
-    public void PlayClip(string name)
-    {
-        Sound s = Array.Find(AudioManager.instance.sounds, sound => sound.name == name);
-        s.source.Play();
-    }
 }

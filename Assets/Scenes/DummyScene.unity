@@ -1195,6 +1195,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
       - m_Target: {fileID: 993719555}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
@@ -1217,6 +1218,8 @@ MonoBehaviour:
 >>>>>>> 56fc78f4d17f43a56c16b2b08074103b60fc70fd
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> parent of 56fc78f (final commit! woohoo! 😈)
 --- !u!222 &617818902
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1225,6 +1228,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617818898}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!1001 &993719554
 =======
@@ -1401,6 +1405,8 @@ AudioSource:
 =======
   m_SourcePrefab: {fileID: 100100000, guid: a9d6fedcff9008e44bdeb0817a67736f, type: 3}
 >>>>>>> 56fc78f4d17f43a56c16b2b08074103b60fc70fd
+=======
+>>>>>>> parent of 56fc78f (final commit! woohoo! 😈)
 --- !u!1 &1862898367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,8 +1544,11 @@ SceneRoots:
   - {fileID: 15792235}
   - {fileID: 534298286}
 <<<<<<< HEAD
+<<<<<<< HEAD
   - {fileID: 993719554}
 =======
   - {fileID: 1243893308}
   - {fileID: 854448934}
 >>>>>>> 56fc78f4d17f43a56c16b2b08074103b60fc70fd
+=======
+>>>>>>> parent of 56fc78f (final commit! woohoo! 😈)
